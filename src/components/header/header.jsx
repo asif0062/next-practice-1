@@ -7,9 +7,14 @@ const Header = () => {
       <Link className="text-2xl" href={`/`}>
         Logo
       </Link>
-      <Link className="text-md" href={`/posts`}>
-        Posts
-      </Link>
+      <span className="flex gap-4">
+        <Link className="text-md" href={`/posts`}>
+          Posts
+        </Link>
+        <Link className="text-md" href={`/products`}>
+          Products
+        </Link>
+      </span>
     </div>
   );
 };
