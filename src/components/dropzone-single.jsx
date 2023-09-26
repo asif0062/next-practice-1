@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
@@ -39,6 +39,7 @@ const ImagePreview = {
   maxHeight: "100%",
   margin: "auto",
   borderRadius: "2px",
+  width: "75px",
 };
 
 const FileName = {

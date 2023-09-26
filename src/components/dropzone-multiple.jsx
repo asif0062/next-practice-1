@@ -105,21 +105,17 @@ const DropzoneMultiple = (props) => {
     },
     [files]
   );
-
-  console.log(files, "files");
   return (
-    <section style={dropzoneStyle} onClick={open}>
-      <div {...getRootProps({ className: "dropzone" })} onClick={(e) => e.stopPropagation}>
-        <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
-        <div>
-          {/* <button type="button" onClick={open}>
-            Open File Dialog
-          </button> */}
+    <>
+      <section style={dropzoneStyle} onClick={open}>
+        <div {...getRootProps({ className: "dropzone" })} onClick={(e) => e.stopPropagation}>
+          <input {...getInputProps()} />
+          <p>Drag 'n' drop some files here, or click to select files</p>
+          <div></div>
         </div>
-      </div>
+      </section>
       <aside style={thumbsContainer}>{thumbs}</aside>
-    </section>
+    </>
   );
 };
 
