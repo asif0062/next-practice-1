@@ -56,7 +56,7 @@ const img = {
   height: "100%",
 };
 
-const DropzoneMultiple = (props) => {
+const DropzoneMultiple = () => {
   const [files, setFiles] = useState([]);
   const { getRootProps, getInputProps, open } = useDropzone({
     accept: "image/*",
