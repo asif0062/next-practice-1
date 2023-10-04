@@ -62,9 +62,11 @@ const DropzoneComponent = () => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: "image/*",
+    accept: {
+      "image/*": [".jpeg", ".png"],
+    },
     maxSize: 1024 * 1024 * 5,
-    maxFiles: 3,
+    maxFiles: 1,
   });
 
   const fileList = files.map((file) => (

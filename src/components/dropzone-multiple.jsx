@@ -59,7 +59,9 @@ const img = {
 const DropzoneMultiple = () => {
   const [files, setFiles] = useState([]);
   const { getRootProps, getInputProps, open } = useDropzone({
-    accept: "image/*",
+    accept: {
+      "image/*": [".jpeg", ".png"],
+    },
     onDrop: (acceptedFiles) => {
       setFiles(
         acceptedFiles.map((file) =>
